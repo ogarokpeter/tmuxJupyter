@@ -9,9 +9,9 @@ base_ip = "0.0.0.0"
 base_port = 20000
 
 
-def start(num_users, base_dir='./', session_name='my_fucking_session'):
+def start(num_users, base_dir='./', session_name='my_hugging_session'):
     """
-    Запустить $num_users ноутбуков. У каждого рабочай директория $base_dir+$folder_num
+    Run $num_users Jupyter notebooks. Each notebook has a separate working directory $base_dir+$folder_num
     """
     session = server.new_session(session_name)
     # session.kill_window(0)
@@ -25,19 +25,19 @@ def start(num_users, base_dir='./', session_name='my_fucking_session'):
         pane.send_keys("jupyter notebook --ip {} --port {} --no-browser --NotebookApp.token='{}' --NotebookApp.notebook_dir='{}'".format(base_ip, port, token, dir_name))
     
 
-def stop(num, session_name="my_fucking_session"):
+def stop(num, session_name="my_hugging_session"):
     """
-    @:param session_name: Названия tmux-сессии, в которой запущены окружения
-    @:param num: номер окружения, кот. можно убить
+    @:param session_name: The name of the tmux-session
+    @:param num: Number of the window that should be shut down
     """
     session = server.find_where({ "session_name": session_name })
     session.kill_window(num)
 
 
 
-def stop_all(session_name="my_fucking_session"):
+def stop_all(session_name="my_hugging_session"):
     """
-    @:param session_name: Названия tmux-сессии, в которой запущены окружения
+    @:param session_name: The name of the tmux-session
     """
     session = server.find_where({ "session_name": session_name })
     session.kill_session()
