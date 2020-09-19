@@ -1,3 +1,27 @@
+# tmuxJupyter
+
+## Description
+
+Program that runs a pre-defined number of isolated Jupyter notebooks. Each notebook has its own working directory, port and token, and the program is capable of  shutting down unneeded notebooks.
+
+Program was implemented as a task in my university. The description of the task (in Russian) is below.
+
+## How to run
+
+Just run 
+
+```
+$ python3 main.py
+```
+
+with nessessary CLI arguments. The list of all arguments and a quick help can be reached by running
+
+```
+$ python3 main.py --help
+```
+
+## Description of the task (Russian)
+
 Написать программу, которая запускает в tmux *N* изолированных окружений Jupyter.
 * **\[1.5\]** У каждого окружения должна быть своя рабочая директория, свой порт и токен.
 * **\[1\]** Каждое окружение должно жить в своём tmux-окне (window).
