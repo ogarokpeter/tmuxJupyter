@@ -47,7 +47,7 @@ if __name__ == "__main__":
     parser.add_argument('action', default='start', choices=['start', 'stop', 'stop_all'], help='What do you want to do?')
     parser.add_argument('--num_users', '-nu', type=int, help='Number of notebooks to open')
     parser.add_argument('--num', '-n', type=int, help='Name of tmux window to kill')
-    parser.add_argument('--session_name', '-s', default='my_fucking_session', help='Name of tmux-session')
+    parser.add_argument('--session_name', '-s', default='my_hugging_session', help='Name of tmux-session')
     parser.add_argument('--base_dir', '-d', default='./', help='Directory to create Jupyter notebooks into')
 
     args = parser.parse_args()
